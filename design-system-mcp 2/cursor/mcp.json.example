@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "design-system": {
+      "command": "node",
+      "args": ["/ABSOLUTE/PATH/design-system-mcp/dist/index.js"]
+    }
+  }
+}
