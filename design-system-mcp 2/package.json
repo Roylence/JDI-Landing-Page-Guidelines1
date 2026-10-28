@@ -1,0 +1,27 @@
+{
+  "name": "zero-design-system-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "ZERO 落地页资产、语义树和 Design Tokens 的只读 MCP 服务",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "node --watch --experimental-strip-types src/index.ts",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "sync:zero": "node scripts/sync-zero.mjs",
+    "import:zero": "node scripts/sync-zero.mjs --import",
+    "test:installed": "npm run build && node scripts/smoke-skill.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "typescript": "7.0.2"
+  }
+}
